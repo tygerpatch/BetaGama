@@ -1,0 +1,14 @@
+<!-- 
+	  Derived from László Németh's Lightproof grammar checker
+	  https://launchpad.net/lightproof
+	  2009 (c) László Németh (nemeth at OO.o), license: GNU LGPL
+-->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest:manifest>
+
+  <manifest:file-entry 
+	  manifest:media-type="application/vnd.sun.star.uno-component;type=Python"
+		manifest:full-path="BetaGama.py"/>
+
+</manifest:manifest>
