@@ -1,0 +1,9 @@
+Does not run on newer versions of OpenOffice or LibreOffice.
+Should work on OpenOffice 3.0
+
+To install:
+1) Zip files
+2) Change extension from .zip to .oxt
+3) Install extension through OpenOffice
+4) Restart OpenOffice
+
