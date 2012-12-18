@@ -21,10 +21,12 @@ ignore = {}
 
 import grammar_rule
 import graviax
+import richard_nordquist
 
 rules = []
 
 rules.extend( graviax.rules )
+rules.extend( richard_nordquist.rules )
 
 def create_proofreading_error(starting_position_of_text, match, rule):
   proofreading_error = uno.createUnoStruct( "com.sun.star.linguistic2.SingleProofreadingError" )                      
