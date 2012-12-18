@@ -2,27 +2,11 @@
 # created by Matthew J. Strawbridge 2005, GNU Less General Public License
 # https://sourceforge.net/projects/graviax/
 
-# This library is free software; you can redistribute it and/or
-# modify it under the terms of the GNU Lesser General Public
-# License as published by the Free Software Foundation; either
-# version 2.1 of the License, or (at your option) any later version.
-
-# This library is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# Lesser General Public License for more details.
-
-# You should have received a copy of the GNU Lesser General Public
-# License along with this library; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA
-
 from grammar_rule import GrammarRule
 
 rules = []
 
 # rules.append( GrammarRule(pattern, suggestion, short_comment, full_comment, exceptions) )
-
-# TODO: separate each xml file into a separate python file
 
 # *** en-GB-cliches.xml
 
@@ -158,7 +142,7 @@ rules.append( GrammarRule(r"\b(join(ed|ing)?) together\b", r"\1", "Redundant",
   "To 'join' things is to bring them 'together'.", {}))
 
 rules.append( GrammarRule(r"\bmight (perhaps|possibly)\b", "might", "Redundant",
-  r"The word 'might' already expresses doubt, so '\1' is redundant.", {}))
+  r"The word 'might' already expresses doubt. Therefore '\1' is redundant.", {}))
 
 rules.append( GrammarRule(r"\bmust (definitely|inevitably|necessarily)\b", "must", "Redundant",
   r"The word 'must' already expresses inevitability, so '\1' is redundant.", {}))
