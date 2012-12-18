@@ -33,20 +33,20 @@ rules.append( GrammarRule(r"\bis no exception\b", "", "Cliche", "You should avoi
 # *** en-badstyle.xml
 
 # Stressed 'And' before 'Therefore'
-rules.append( GrammarRule(r"\band(,|, | ,| , )therefore(,| ,|)", "and therefore", "Bad Style", "The comma emphasizes 'and' and should be removed.", {}))
+rules.append( GrammarRule(r"\band(,|, | ,| , )therefore(,| ,|)", "and therefore", "Bad Style", "The comma emphasizes the 'and.'  Therefore, it should be removed.", {}))
 
 # Double negatives
-rules.append( GrammarRule(r"\b(are|is|has|was|do|does|wo|would|could|should|have)n't not\b", r"\1", "Bad Style", "Double negative", {}))
+rules.append( GrammarRule(r"\b(are|is|has|was|do|does|wo|would|could|should|have)n't not\b", r"\1", "Double Negative", "Double Negative", {}))
 
 # Vowels
 exceptions = {1 :  ("unifiable", "unified", "uniformed", "unifying", "united", "undulated", "universalised", "universalized")} 
 rules.append( GrammarRule(r"\bnot (un(([aeiou][a-z]{2})[a-z]*([ai]ble|ed|ing)))\b", r"\2", "Bad Style",  "Double negative", exceptions)) 
-rules.append( GrammarRule(r"\bnot an (un(([aeiou][a-z]{2})[a-z]*([ai]ble|ed|ing)))\b", r"an \2", "Bad Style",  "Double negative", exceptions))
+rules.append( GrammarRule(r"\bnot an (un(([aeiou][a-z]{2})[a-z]*([ai]ble|ed|ing)))\b", r"an \2", "Double Negative",  "Double Negative", exceptions))
 
 # Consonants
 exceptions = {3 :  ("der")} # ***
 rules.append( GrammarRule(r"\bnot (un(([^aeiou][a-z]{2})[a-z]*([ai]ble|ed|ing)))\b", r"\2", "Bad Style",  "Double negative", exceptions)) # ***
-rules.append( GrammarRule(r"\bnot an (un(([^aeiou][a-z]{2})[a-z]*([ai]ble|ed|ing)))\b", r"a \2", "Bad Style",  "Double negative", exceptions)) # ***
+rules.append( GrammarRule(r"\bnot an (un(([^aeiou][a-z]{2})[a-z]*([ai]ble|ed|ing)))\b", r"a \2", "Double Negative",  "Double Negative", exceptions)) # ***
 
 # Have to have
 rules.append( GrammarRule(r"\bhave to have\b", "must have", "Bad Style", "The phrase 'must have' is clearer than 'have to have'.", {}) )
@@ -79,15 +79,15 @@ rules.append( GrammarRule(r"\b(I|she|he|we|they|you) practice([ds]|)\b", r"\1 pr
   "Homophone", "Practice is a noun; practise is a verb.", {}))
 
 rules.append( GrammarRule(r"\bits not\b", "it's not", "Homophone",
-  "It's means it is or it has.  Its means belonging to it.", {}))
+  "It's means 'it is or it has.'  Its means belonging to it.", {}))
 
 rules.append( GrammarRule(r"\b(about|around|at|by|for|from|in|near|of|on|over|through|to|towards|under|with|without) it's\b",
-  r"\1 its", "Homophone", "It's means it is or it has.  Its means belonging to it.", {}))
+  r"\1 its", "Homophone", "It's means 'it is or it has.'  Its means belonging to it.", {}))
 
 rules.append( GrammarRule(r"\byour not\b", "you're not", "Homophone", "You're means you are.  Your means belonging to you.", {}))
 
 rules.append( GrammarRule(r"\b(about|around|at|by|for|from|in|near|of|on|over|through|to|towards|under|with|without) (you)'(r)e\b",
-  r"\1 \2\3", "Homophone", "You're means you are.  Your means belonging to you.", {}))
+  r"\1 \2\3", "Homophone", "You're means 'you are'.  Your means belonging to you.", {}))
 
 exceptions = {1:("an", "in", "for", "the", "to")}
 
@@ -126,7 +126,7 @@ rules.append( GrammarRule(r"\ban other\b", "another", "Homophone",
 # *** en-redundancies.xml
 
 rules.append( GrammarRule(r"\b(return(ed|ing|s)?) back\b", r"\1", 
-  "Redundant", "The 'back' is implied by the use of 'return', so is redundant.", {}))
+  "Redundant", "The 'back' is implied by the use of 'return'.  Therefore it is redundant.", {}))
 
 rules.append( GrammarRule(r"\bhonest truth\b", "truth", 
   "Redundant", "All 'truth' is 'honest'.", {}))
@@ -167,10 +167,10 @@ rules.append( GrammarRule(r"\b(previous|prior) (experiences?)\b", r"\2", "Redund
   r"All experiences must have happened in the past, so '\1' is redundant.", {}))
 
 rules.append( GrammarRule(r"\bwill(,|, | ,| , | )in the future(,| ,|)\b", "will", "Redundant",
-  "If something 'will' happen, it must be 'in the future' rather than the past.", {}))
+  "If something 'will' happen, then it must be 'in the future' rather than the past.", {}))
 
 rules.append( GrammarRule(r"\bwork colleague\b", "colleague", "Redundant",
-  "If term 'work' is already implied by 'colleague'.", {}))
+  "'work' is already implied by 'colleague'", {}))
 
 # *** en-punctuation.xml
 
