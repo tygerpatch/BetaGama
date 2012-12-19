@@ -22,11 +22,13 @@ ignore = {}
 import grammar_rule
 import graviax
 import redundancy
+import cliche
 
 rules = []
 
 rules.extend(graviax.rules)
 rules.extend(redundancy.rules)
+rules.extend(cliche.rules)
 
 def create_proofreading_error(starting_position_of_text, match, rule):
   proofreading_error = uno.createUnoStruct( "com.sun.star.linguistic2.SingleProofreadingError" )                      

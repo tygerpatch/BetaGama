@@ -8,38 +8,6 @@ rules = []
 
 # rules.append( GrammarRule(pattern, suggestion, short_comment, full_comment, exceptions) )
 
-# *** en-GB-cliches.xml
-
-rules.append( 
-  GrammarRule(
-    r"\bleave no stone unturned\b",	# pattern 
-    "",  				# suggestion 
-    "Cliche",				# short comment
-    "You should avoid using cliches",	# full comment 
-    {}					# exceptions
-  ) 
-)
-
-rules.append( 
-  GrammarRule(
-    r"\blike a bull in a china shop\b",	# pattern
-    "", 				# suggestion 
-    "Cliche", 				# short comment
-    "You should avoid using cliches", 	# full comment 
-    {}					# exceptions
-  ) 
-)
-
-rules.append( 
-  GrammarRule(
-    r"\bis no exception\b",		# pattern
-    "", 				# suggestion 
-    "Cliche", 				# short comment
-    "You should avoid using cliches",	# full comment 
-    {}					# exceptions
-  ) 
-)
-
 # *** en-badstyle.xml
 
 # Stressed 'And' before 'Therefore'
