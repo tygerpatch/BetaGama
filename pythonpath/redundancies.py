@@ -444,7 +444,54 @@ rules.append(
   ) 
 )
 
+rules.append( 
+  GrammarRule(
+    r"\b(filled|full) to capacity\b",	# pattern
+    r"\1",		# suggestion 
+    "Redundancy",	# short comment
+    "Redundancy",	# full comment 
+    {}			# exceptions
+  ) 
+)
 
+rules.append( 
+  GrammarRule(
+    r"\b((auto|)biography) of (his|her) own life\b",	# pattern
+    r"\1\2",						# suggestion 
+    "Redundancy",					# short comment
+    "Redundancy",					# full comment 
+    {}							# exceptions
+  ) 
+)
 
+rules.append( 
+  GrammarRule(
+    r"\bweather (conditions|situation)\b",	# pattern
+    "weather",		# suggestion 
+    "Redundancy",	# short comment
+    "Redundancy",	# full comment 
+    {}			# exceptions
+  ) 
+)
+
+rules.append( 
+  GrammarRule(
+    r"\btall in (height|stature)\b",	# pattern
+    "tall",		# suggestion 
+    "Redundancy",	# short comment
+    "Redundancy",	# full comment 
+    {}			# exceptions
+  ) 
+)
+
+rules.append( 
+  GrammarRule(
+    r"\bintroduced (a new|for the first time)\b",	# pattern
+    "introduced",					# suggestion 
+    "Redundancy",					# short comment
+    "Redundancy",					# full comment 
+    {}							# exceptions
+  ) 
+)
 
 
