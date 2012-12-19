@@ -113,7 +113,7 @@ rules.append(
 )
 
 # Have to have
-srules.append( 
+rules.append( 
   GrammarRule(
     r"\bhave to have\b",					# pattern
     "must have",						# suggestion 
