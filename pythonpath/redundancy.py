@@ -23,85 +23,54 @@ def addRule(
 
 # en-redundancies.xml
 
-rules.append( 
-  GrammarRule(
-    r"\b(return(ed|ing|s)?) back\b",	# pattern
-    r"\1",				# suggestion 
-    "Redundant",			# short comment
-    "The 'back' is implied by the use of 'return'.  Therefore it is redundant.",	# full comment 
-    {}					# exceptions
-  )
-)
+addRule(
+  pattern = r"\b(return(ed|ing|s)?) back\b",
+  suggestion = r"\1",
+  short_comment = "Redundant",
+  full_comment = "The 'back' is implied by the use of 'return'.  Therefore it is redundant.")
 
-rules.append( 
-  GrammarRule(
-    r"\bhonest truth\b",	# pattern
-    "truth",			# suggestion 
-    "Redundant",		# short comment
-    "All 'truth' is 'honest'.",	# full comment 
-    {}				# exceptions
-  )
-)
+addRule(
+  pattern = r"\bhonest truth\b",
+  suggestion = "truth",
+  short_comment = "Redundant",
+  full_comment = "All 'truth' is 'honest'.")
 
-rules.append( 
-  GrammarRule(
-    r"\btrue fact(s|)\b",	# pattern
-    r"fact\1",			# suggestion 
-    "Redundant",		# short comment
-    "All 'facts' are 'true'.",	# full comment 
-    {}				# exceptions
-  )
-)
+addRule(
+  pattern = r"\btrue fact(s|)\b",
+  suggestion = r"fact\1",
+  short_comment = "Redundant",
+  full_comment = "All 'facts' are 'true'.")
 
-rules.append( 
-  GrammarRule(
-    r"\b(dis|)agree with the fact that\b",			# pattern
-    r"\1agree that",						# suggestion 
-    "Redundant",						# short comment
-    "If it's a 'fact' then it is not open to interpretation.",	# full comment 
-    {}								# exceptions
-  )
-)
+addRule(
+  pattern = r"\b(dis|)agree with the fact that\b",
+  suggestion = r"\1agree that",
+  short_comment = "Redundant",
+  full_comment = "If it's a 'fact' then it is not open to interpretation.")
 
-rules.append( 
-  GrammarRule(
-    r"\bfrom whence\b", 											# pattern
-    "whence", 													# suggestion 
-    "Redundant",												# short comment
-    "The word 'whence' means from what place, source origin or cause.  Therefore 'from whence' is redundant.",	# full comment 
-    {}														# exceptions
-  )
-)
+addRule(
+  pattern = r"\bfrom whence\b",
+  suggestion = "whence",
+  short_comment = "Redundant",
+  full_comment = "The word 'whence' means from what place, source origin or cause.  Therefore 'from whence' is redundant.")
 
-rules.append( 
-  GrammarRule(
-    r"\b(start(ed|ing)?) first (by|in|with)\b", # pattern
-    r"\1 \3", 					# suggestion 
-    "Redundant",				# short comment
-    r"The phrase '\1 first' is redundant.",	# full comment 
-    {}						# exceptions
-  )
-)
-  
-rules.append( 
-  GrammarRule(
-    r"\bfirst (be |)(start(ed|ing|))(by|in|with|)\b",	# pattern
-    r"\1\2 \4",						# suggestion 
-    "Redundant",					# short comment
-    r"The phrase 'first \1\2' is redundant.",		# full comment 
-    {}							# exceptions
-  )
-)
+addRule(
+  pattern = r"\b(start(ed|ing)?) first (by|in|with)\b",
+  suggestion = r"\1 \3",
+  short_comment = "Redundant",
+  full_comment = r"The phrase '\1 first' is redundant.")
 
-rules.append( 
-  GrammarRule(
-    r"\b(repeat(ed|ing|s|))( it|) again\b",		# pattern
-    r"\1\3",						# suggestion 
-    "Redundant",					# short comment
-    r"The word 'again' is redundant with '\1'.",	# full comment 
-    {}							# exceptions
-  )
-)
+addRule(
+  pattern = r"\bfirst (be |)(start(ed|ing|))(by|in|with|)\b",
+  suggestion = r"\1\2 \4",
+  short_comment = "Redundant",
+  full_comment = r"The phrase 'first \1\2' is redundant.")
+
+addRule(
+  pattern = r"\b(repeat(ed|ing|s|))( it|) again\b",
+  suggestion = r"\1\3",
+  short_comment = "Redundant",
+  full_comment = r"The word 'again' is redundant with '\1'.")
+
 
 rules.append( 
   GrammarRule(
@@ -573,15 +542,6 @@ rules.append(
   ) 
 )
 
-#rules.append( 
-#  GrammarRule(
-#    r"\b(ISBN|PIN) number\b",	# pattern
-#    r"\1",					# suggestion 
-#    "Redundancy",					# short comment
-#    "Redundancy",					# full comment 
-#    {}							# exceptions
-#  ) 
-#)
 
 addRule(
   pattern = r"\b(ISBN|PIN) number\b",
