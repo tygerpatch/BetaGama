@@ -2,6 +2,19 @@ from grammar_rule import GrammarRule
 
 rules = []
 
+def addRule(
+  pattern = "",
+  suggestion = "",
+  short_comment = "",
+  full_comment = "",
+  exceptions = {}):
+
+  global rules
+
+  rules.append(
+    GrammarRule(pattern, suggestion, short_comment, full_comment, exceptions)
+  )
+
 # rules.append( GrammarRule(pattern, suggestion, short_comment, full_comment, exceptions) )
 
 # The following rules were derived from Graviax
@@ -404,15 +417,21 @@ rules.append(
   ) 
 )
 
-rules.append( 
-  GrammarRule(
-    r"\b(reply|retreat|revert|extradite|refer|reflect) back\b",	# pattern
-    r"\1",		# suggestion 
-    "Redundancy",	# short comment
-    "Redundancy",	# full comment 
-    {}			# exceptions
-  ) 
-)
+#rules.append( 
+#  GrammarRule(
+#    r"\b(reply|retreat|revert|extradite|refer|reflect) back\b",	# pattern
+#    r"\1",		# suggestion 
+#    "Redundancy",	# short comment
+#    "Redundancy",	# full comment 
+#    {}			# exceptions
+#  ) 
+#)
+
+addRule(
+  pattern = r"\b(reply|retreat|revert|extradite|refer|reflect) back\b",
+  suggestion = r"\1",
+  short_comment = "Redundancy",
+  full_comment = "Redundancy")
 
 rules.append( 
   GrammarRule(
@@ -554,12 +573,18 @@ rules.append(
   ) 
 )
 
-rules.append( 
-  GrammarRule(
-    r"\b(ISBN|PIN) number\b",	# pattern
-    r"\1",					# suggestion 
-    "Redundancy",					# short comment
-    "Redundancy",					# full comment 
-    {}							# exceptions
-  ) 
-)
+#rules.append( 
+#  GrammarRule(
+#    r"\b(ISBN|PIN) number\b",	# pattern
+#    r"\1",					# suggestion 
+#    "Redundancy",					# short comment
+#    "Redundancy",					# full comment 
+#    {}							# exceptions
+#  ) 
+#)
+
+addRule(
+  pattern = r"\b(ISBN|PIN) number\b",
+  suggestion = r"\1",
+  short_comment = "Redundancy",
+  full_comment = "Redundancy")
