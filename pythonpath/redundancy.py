@@ -456,11 +456,21 @@ rules.append(
 
 rules.append( 
   GrammarRule(
-    r"\b((auto|)biography) of (his|her) own life\b",	# pattern
-    r"\1\2",						# suggestion 
+    r"\bautobiography of (his|her) own life\b",		# pattern
+    r"autobiography",					# suggestion 
     "Redundancy",					# short comment
     "Redundancy",					# full comment 
     {}							# exceptions
+  ) 
+)
+
+rules.append( 
+  GrammarRule(
+    r"\bbiography of (his|her) life\b",	# pattern
+    r"biography",			# suggestion 
+    "Redundancy",			# short comment
+    "Redundancy",			# full comment 
+    {}					# exceptions
   ) 
 )
 
