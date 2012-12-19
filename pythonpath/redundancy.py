@@ -504,4 +504,62 @@ rules.append(
   ) 
 )
 
+rules.append( 
+  GrammarRule(
+    r"\b(may|could) possibly\b",	# pattern
+    r"\1",				# suggestion 
+    "Redundancy",			# short comment
+    "Redundancy",			# full comment 
+    {}					# exceptions
+  ) 
+)
 
+rules.append( 
+  GrammarRule(
+    r"\bplan (ahead|in advance)\b",	# pattern
+    "plan",				# suggestion 
+    "Redundancy",			# short comment
+    "Redundancy",			# full comment 
+    {}					# exceptions
+  ) 
+)
+
+rules.append( 
+  GrammarRule(
+    r"\bpreboard as an airplane\b",		# pattern
+    "board",					# suggestion 
+    "Redundancy",				# short comment
+    "Redundancy",				# full comment 
+    {}						# exceptions
+  ) 
+)
+
+rules.append( 
+  GrammarRule(
+    r"\bpre(heat|record)\b",	# pattern
+    r"\1",			# suggestion 
+    "Redundancy",		# short comment
+    "Redundancy",		# full comment 
+    {}				# exceptions
+  ) 
+)
+
+rules.append( 
+  GrammarRule(
+    r"\breason (is |)(because|why)\b",	# pattern
+    r"reason \1",					# suggestion 
+    "Redundancy",					# short comment
+    "Redundancy",					# full comment 
+    {}							# exceptions
+  ) 
+)
+
+rules.append( 
+  GrammarRule(
+    r"\b(ISBN|PIN) number\b",	# pattern
+    r"\1",					# suggestion 
+    "Redundancy",					# short comment
+    "Redundancy",					# full comment 
+    {}							# exceptions
+  ) 
+)
